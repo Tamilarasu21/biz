@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<!-- carousel start-->
+<div id="my_carousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="assets/carousel1.png" alt="i1" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel2.png" alt="i2" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel3.png" alt="i3" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel4.png" alt="i3" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+  </div>
+  <a class="carousel-control left" href="#my_carousel" data-slide="prev">
+    <span class="icon-prev left"></span>
+  </a>
+  <a class="carousel-control right" href="#my_carousel" data-slide="next">
+    <span class="icon-next right"></span>
+  </a>
+</div>
+<!-- carousel end-->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-default">
+      <a href="#" class="navbar-brand"><img src="assets/logo.png" alt="" id="brand-logo" class="img-circle" width="50px" height="50px"></a>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link" id="ni">
+              Home
+            </a></li>
+          <li class="nav-item">
+            <a type="button" class="nav-link dropdown-toggle" style="background:none;color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" id="ni">
+              Services
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-item"><a href="pages.services/webdevelopment.html" id="dd">Web Development</a></li>
+              <li class="dropdown-item"><a href="pages.services/webdesigning.html" id="dd">Web Designing</a></li>
+              <li class="dropdown-item"><a href="pages.services/graphicdesigning.html" id="dd">Graphic Designing</a></li>
+              <li class="dropdown-item"><a href="pages.services/seo.html" id="dd">SEO</a></li>
+              <li class="dropdown-item"><a href="pages.services/digitalmarketing.html" id="dd">Digital Marketing</a></li>
+              <li class="dropdown-item"><a href="pages.services/contentmarketing.html" id="dd">Content Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active"><a href="#" class="nav-link" id="ni">
+              About
+            </a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" id="ni">
+              Contact us
+            </a></li>
+        </ul>
+        <ul class="nav navbar-nav" style="float:right;margin-right:10px;">
+          <li class="nav-item"><a href="#" class="nav-link" id="ni" data-toggle="modal" data-target="#signup">
+              Signup
+            </a></li>
+          <li class="nav-item"><a href="#" class="nav-link" id="ni" data-toggle="modal" data-target="#signin">
+              Signin
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+ <!-- modal signup -->
+ <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content col-md-8 col-md-offset-2">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="text-center">
+          <img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px">
+          <h3 class="text-bold">Sign Up</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" action="signup.php" method="post">
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" pattern=".{5,}" placeholder="Password" onkeyup="checkPass();" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="cpassword" class="form-control" name="cpassword" pattern=".{5,}" placeholder="Confirm Password" onkeyup="checkPass();" required>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button class="btn btn-primary"><a href="index.html" id="ni">Sign Up</a></button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal signup ends -->
+<!-- modal signin -->
+<div class="modal fade" id="signin">
+  <div class="modal-dialog">
+    <div class="modal-content col-md-8 col-md-offset-2">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="text-center">
+          <img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px">
+          <h3 class="text-bold">Sign In</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" method="post" action="signin.php">
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" pattern=".{5,}" placeholder="Password" required>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button class="btn btn-primary"><a href="home.html" id="ni">Sign In</a></button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal signin end -->
+  <!-- content start -->
+  <div class="container" style="z-index:-1;position:relative;margin-top:-20px">
+    <h3 class="text-center font-weight-bold">About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repellendus voluptas, quas officiis maxime fugit magnam accusantium quos molestiae, ipsam explicabo ducimus? Perspiciatis, minus corrupti!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perferendis, excepturi voluptatum aliquam in nam et quas ipsum exercitationem laborum pariatur qui. Officia laudantium autem, sint ex deserunt assumenda voluptates, magnam, qui incidunt maxime laborum neque dolore quibusdam! Perspiciatis ratione in itaque ipsa quam aut veniam sunt placeat, ullam officiis.</p>
+    <h3 class="text-left font-weight-bold">why Choose us</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime cum tempora libero nihil officia voluptatum quasi dolores odio suscipit! Accusantium aliquam suscipit iure veritatis magni!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi necessitatibus qui ipsum illum maiores iusto earum temporibus ex obcaecati, reiciendis quas voluptatum nam dolorem, nobis saepe quisquam perspiciatis? Aut fuga quo, obcaecati quis pariatur qui iste distinctio aliquid saepe, reprehenderit temporibus itaque esse cum quidem eum reiciendis ex cumque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ullam quam repellendus at voluptas amet praesentium ipsam consectetur quaerat! Tempora unde doloribus minima vitae blanditiis? Est nesciunt doloribus vitae consequuntur iusto vero, optio ab animi, repellat nobis laudantium a facilis mollitia eos perspiciatis ut totam, aperiam quod ratione quo. Cum ipsum temporibus debitis unde cupiditate quae! Excepturi dolore sunt vero nobis a nostrum reiciendis similique obcaecati, reprehenderit enim cumque ipsum quia nesciunt assumenda non odio voluptate, rerum dicta? Ab ea doloremque cumque adipisci earum, non eius error minima possimus velit impedit totam aut nesciunt nihil quasi consequatur voluptatem reiciendis incidunt?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laudantium exercitationem nihil? Omnis dolores adipisci consequuntur minus natus molestias officia optio sequi quasi, aspernatur, eos rerum eveniet recusandae totam dolorem reiciendis repellendus mollitia ab eius aut placeat similique. Expedita, recusandae quaerat. Molestiae exercitationem quas voluptas ipsa ex quia veritatis quo inventore iure ratione officia, possimus amet dolorum, repellendus porro minus expedita doloribus ad cum fugit. Rem ipsam ullam aliquid rerum deserunt. Aliquid voluptate ducimus tempore cupiditate obcaecati dolores. Doloremque voluptatibus placeat ab eius magnam, enim expedita quo nisi nulla natus consequatur voluptates sequi facere dicta incidunt eveniet corrupti dolores. Eaque nihil exercitationem perspiciatis necessitatibus deserunt officia ea sed eos in, itaque eligendi, est enim omnis? Ea sit aspernatur tempora dolorem quam necessitatibus voluptas, officiis tenetur reprehenderit optio unde, cum eius placeat libero. Facere, adipisci. Id perspiciatis aliquid voluptatem unde excepturi ullam, eligendi vero? Praesentium, asperiores! Odio dolore dolores atque fugiat!</p>
+    <h2 class="text-left text-center"><b>Our Team</b></h2>
+    <br>
+    <div class="row">
+      <div id="team_carousel" class="carousel slide" >
+        <div class="carousel-inner" style="width:100%;" role="listbox">
+          <div class="item active text-center" style="max-height:400px;min-width:100%;">
+            <div class="col-lg-4 text-center">
+              <img src="assets/man_two.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>John Doe</h2>
+              <h5 class="text-info">CEO</h5>
+              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <img src="assets/woman.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>Marie jane</h2>
+              <h5 class="text-info">CTO</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <img src="assets/man.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>Jack CJ</h2>
+              <h5 class="text-info">Managing Director</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+          <div class="item" style="max-height:400px;min-width: 1200px;">
+            <div class="col-lg-4 text-center">
+              <img src="assets/woman.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>Gabriella</h2>
+              <h5 class="text-info">Head HR</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <img src="assets/man_one.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>Addam Xoviach</h2>
+              <h5 class="text-info">Full Stack Developer</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <img src="assets/user.png" alt="" class="img-fluid img-circle" width="150" height="150">
+              <h2>Arun Bhatia</h2>
+              <h5 class="text-info">UI/UX Designer</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div id="team" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="item active text-center">
+              <img src="assets/man_two.png" alt="" class="img-responsive img-circle" width="150" height="150" style="margin:auto;">
+              <h2>John Doe</h2>
+              <h5 class="text-info">CEO</h5>
+              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="item text-center">
+              <img src="assets/woman.png" alt="" class="img-responsive img-circle" width="150" height="150" style="margin:auto;">
+              <h2>Marie jane</h2>
+              <h5 class="text-info">CTO</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="item text-center">
+              <img src="assets/man.png" alt="" class="img-responsive img-circle" width="150" height="150" style="margin:auto;">
+              <h2>Jack CJ</h2>
+              <h5 class="text-info">Managing Director</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="item text-center">
+              <img src="assets/woman.png" alt="" class="img-responsive img-circle" width="150" height="150" style="margin:auto;">
+              <h2>Gabriella</h2>
+              <h5 class="text-info">Head HR</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="item text-center">
+              <img src="assets/man_one.png" alt="" class="img-responsive img-circle" width="150" height="150" style="margin:auto;">
+              <h2>Addam Xoviach</h2>
+              <h5 class="text-info">Full Stack Developer</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="item text-center">
+              <img src="assets/user.png" alt="" class="img-fluid img-circle" width="150" height="150" style="margin:auto;">
+              <h2>Arun Bhatia</h2>
+              <h5 class="text-info">UI/UX Designer</h5>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row ends-->
+  </div>
+  <!-- content end -->
+  <!-- Footer pc start -->
+  <footer class="footer pt-3" id="footer1" style="background:black;color:snow">
+    <div class="container ">
+      <div class="col-md-4 text-center">
+        <h5><b>Social Media</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="https://facebook.com" class="text-info" target="_blank"><img src="assets/facebook-square.png" alt="f" width="18" height="18" style="background:white;"></a></li>
+          <li><a href="https://instagram.com" class="text-danger" target="_blank"><img src="assets/instagram-square.png" alt="i" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+          <li><a href="https://linkedin.com" class="text-primary" target="_blank"><img src="assets/linkedin-square.png" alt="l" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+          <li><a href="https://whatsapp.com" class="text-success" target="_blank"><img src="assets/whatsapp-square.png" alt="w" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5><b>Important Links</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" id="ni">Home</a></li>
+          <li><a href="#" id="ni">About</a></li>
+          <li><a href="#" id="ni">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4" itemscope itemtype="http://schema.org/business">
+        <h5 itemprop="name"><b>For Enquiries</b></h5>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope"></i>&emsp;<a href="mailto:yourmail@gmail.com" id="ni" itemprop="email">yourmail@domain.com</a></li>
+          <li><i class="fa fa-phone"></i>&emsp;<a href="tel:+911234567890" id="ni" itemprop="telephone">+91 1234567890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright text-center">© 2020
+      <a href="#">QueryPup</a>
+    </div>
+  </footer>
+  <!-- Footer pc ends-->
+  <!-- Footer mobile start -->
+  <footer class="footer text-center" id="footer2" style="background:black;color:snow;">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="https://facebook.com" class="text-info" target="_blank"><img src="assets/facebook-square.png" alt="f" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://instagram.com" class="text-danger" target="_blank"><img src="assets/instagram-square.png" alt="i" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://linkedin.com" class="text-primary" target="_blank"><img src="assets/linkedin-square.png" alt="l" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://whatsapp.com" class="text-success" target="_blank"><img src="assets/whatsapp-square.png" alt="w" width="15" height="15" style="background:white;"></a></li>
+  </ul>
+  <div class="text-center">&copy; 2020&nbsp;<a href="#" style="color:antiquewhite;text-decoration: none;">QueryPup</a></div>
+  </footer>
+   <!-- Footer mobile ends-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
+</body>
+
+</html>

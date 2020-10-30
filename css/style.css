@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: -moz-scrollbars-none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.install-form {
+  background: rgb(206, 199, 199);
+  padding: -5px;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.install-form input {
+  border-radius: 3px;
+}
+/* validaion start */
+.modal .form-group input:invalid:required {
+  outline: 0 !important;
+  border: 1px solid gainsboro;
+  box-shadow: none;
+}
+.modal .form-group input:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.modal .form-group input:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+
+.contact .form-group input:invalid:required {
+  outline: 0 !important;
+  border: 1px solid gainsboro;
+  box-shadow: none;
+}
+.contact .form-group input:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.contact .form-group textarea:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.contact .form-group textarea:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+.contact .form-group input:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+/* validaion ends */
+/* contents */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 768px) {
+  body,
+  p {
+    font-size: 12px;
+  }
+  a {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+/* contents ends */
+/* header and footer */
+header {
+  position: -webkit-sticky;
+  z-index: 100;
+}
+header .navbar-default {
+  margin-left: -5px;
+  margin-right: -5px;
+  border: none;
+  background: #2980b9;
+  color: white;
+  left: 0;
+  right: 0;
+}
+.navbar .navbar-brand #brand-logo {
+  margin-top: -15px;
+}
+.navbar .nav .active #ni {
+  color: #2980b9;
+  font-weight: 600;
+}
+#ni {
+  color: white;
+}
+#ni:hover {
+  color: gainsboro;
+  text-decoration: none;
+}
+.nav .dropdown-menu .dropdown-item #dd {
+  color: #2980b9;
+  background: white;
+  margin: auto;
+  width: 90%;
+}
+ .dropdown-menu .dropdown-item #dd:hover {
+  background: gainsboro;
+  color: blue;
+  margin: auto;
+  width: 90%;
+}
+.dropdown-menu .dropdown-item #dd_active  {
+  background: gainsboro;
+  color: blue;
+  margin:auto;
+  width:90%;
+}
+
+@media (min-height: 480px) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  footer {
+    position: -webkit-sticky;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  #footer1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #footer2 {
+    display: none;
+  }
+}
+/* header and footer ends */
+/* carousel */
+@media (max-width: 768px) {
+  #team_carousel .carousel-inner .item {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #team .carousel-inner .item {
+    display: none;
+  }
+}
+/* carousel ends */
+/* contact page start*/
+#details
+{
+  background:#f5f5f5;
+  color:black;
+  padding:13px;
+}
+#de
+{
+  color:black;
+  text-decoration:none;
+}
+#de:hover
+{
+  color:grey;
+  text-decoration:none;
+}
+/* contact page ends */

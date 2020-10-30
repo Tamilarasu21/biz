@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<!-- carousel start-->
+<div id="my_carousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="assets/carousel1.png" alt="i1" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel2.png" alt="i2" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel3.png" alt="i3" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+    <div class="item">
+      <img src="assets/carousel4.png" alt="i3" class="img-reponsive" width="100%" style="max-height:240px;">
+    </div>
+  </div>
+  <a class="carousel-control left" href="#my_carousel" data-slide="prev">
+    <span class="icon-prev left"></span>
+  </a>
+  <a class="carousel-control right" href="#my_carousel" data-slide="next">
+    <span class="icon-next right"></span>
+  </a>
+</div>
+<!-- carousel end-->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-default">
+      <a href="#" class="navbar-brand"><img src="assets/logo.png" alt="" id="brand-logo" class="img-circle" width="50px" height="50px"></a>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link" id="ni">
+              Home
+            </a></li>
+          <li class="nav-item">
+            <a type="button" class="nav-link dropdown-toggle" style="background:none;color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" id="ni">
+              Services
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-item"><a href="pages.services/webdevelopment.html" id="dd">Web Development</a></li>
+              <li class="dropdown-item"><a href="pages.services/webdesigning.html" id="dd">Web Designing</a></li>
+              <li class="dropdown-item"><a href="pages.services/graphicdesigning.html" id="dd">Graphic Designing</a></li>
+              <li class="dropdown-item"><a href="pages.services/seo.html" id="dd">SEO</a></li>
+              <li class="dropdown-item"><a href="pages.services/digitalmarketing.html" id="dd">Digital Marketing</a></li>
+              <li class="dropdown-item"><a href="pages.services/contentmarketing.html" id="dd">Content Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link" id="ni">
+              About
+            </a></li>
+          <li class="nav-item active"><a href="contact.html" class="nav-link" id="ni">
+              Contact us
+            </a></li>
+        </ul>
+        <ul class="nav navbar-nav" style="float:right;margin-right:10px;">
+          <li class="nav-item"><a href="#" class="nav-link" id="ni" data-toggle="modal" data-target="#signup">
+              Signup
+            </a></li>
+          <li class="nav-item"><a href="#" class="nav-link" id="ni" data-toggle="modal" data-target="#signin">
+              Signin
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+ <!-- modal signup -->
+ <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content col-md-8 col-md-offset-2">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="text-center">
+          <img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px">
+          <h3 class="text-bold">Sign Up</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" action="signup.php" method="post">
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" pattern=".{5,}" placeholder="Password" onkeyup="checkPass();" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="cpassword" class="form-control" name="cpassword" pattern=".{5,}" placeholder="Confirm Password" onkeyup="checkPass();" required>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button class="btn btn-primary"><a href="index.html" id="ni">Sign Up</a></button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal signup ends -->
+<!-- modal signin -->
+<div class="modal fade" id="signin">
+  <div class="modal-dialog">
+    <div class="modal-content col-md-8 col-md-offset-2">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="text-center">
+          <img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px">
+          <h3 class="text-bold">Sign In</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" method="post" action="signin.php">
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" class="form-control" name="password" pattern=".{5,}" placeholder="Password" required>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button class="btn btn-primary"><a href="home.html" id="ni">Sign In</a></button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal signin end -->
+  <!-- content start -->
+<div class="container"  style="position:sticky;z-index: 0;">
+  <div class="col-md-7">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe height="500" width="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125281.99028147191!2d77.29377167236326!3d11.108742609313296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907b0424d75b9%3A0x4750551698a91687!2sTiruppur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1603951663659!5m2!1sen!2sin" class="embed-responsive-item"></iframe>
+    </div>
+  </div>
+	<div class="col-md-5">
+    <h2 class="text-center text-success">Contact Us</h2><br>
+    <form action="" method="post">
+      <div class="form-row contact">
+        <div class="form-group col-md-6">
+          <input type="text" name="firstname" id="firstname" pattern="[A-Za-z0-9]{1,15}$" class="form-control" placeholder="First Name*" required>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" name="lastname" id="lastname" pattern="[A-Za-z0-9]{1,15}$" class="form-control" placeholder="Last Name*" required>
+        </div>
+        <div class="form-group col-md-12">
+          <input type="email" name="email" id="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,}$"class="form-control" placeholder="Email*" required>
+        </div>
+        <div class="form-group col-md-12">
+          <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject*" required>
+        </div>
+        <div class="form-group col-md-12">
+          <textarea name="message" id="message" cols="20" rows="3" class="form-control" placeholder="Message*" pattern="[A-Za-z0-9]{1,1000}$" required="required" style="resize: none;"></textarea>
+        </div>
+        <div class="col-md-8"></div>
+        <div class="col-md-4"><input type="submit" value="Submit" class="btn btn-info btn-block"></div>
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="container-fluid" id="details">
+    <div class="col-md-4 text-center">
+      <a href="mailto:yourmail@domain.com" id="de"><h4><img src="assets/gmail.png" alt="" width="26" height="26">&emsp;yourmail@domain.com</h4></a>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="tel:911234567890" id="de"><h4><img src="assets/smartphone.png" alt="" width="26" height="26">&emsp;+91 1234567890</h4></a>
+    </div>
+    <div class="col-md-4 text-center">
+      <a href="https://wa.me/911234567890" id="de"><h4><img src="assets/whatsapp.png" alt="" width="26" height="26">&emsp;+91 1234567890</h4></a>
+    </div>
+  </div>
+</div>
+<!-- content ends -->
+<!-- Footer pc start -->
+  <footer class="footer pt-3" id="footer1" style="background:black;color:snow">
+    <div class="container ">
+      <div class="col-md-4 text-center">
+        <h5><b>Social Media</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="https://facebook.com" class="text-info" target="_blank"><img src="assets/facebook-square.png" alt="f" width="18" height="18" style="background:white;"></a></li>
+          <li><a href="https://instagram.com" class="text-danger" target="_blank"><img src="assets/instagram-square.png" alt="i" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+          <li><a href="https://linkedin.com" class="text-primary" target="_blank"><img src="assets/linkedin-square.png" alt="l" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+          <li><a href="https://whatsapp.com" class="text-success" target="_blank"><img src="assets/whatsapp-square.png" alt="w" width="18" height="18" style="background:white;margin-top:3px"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5><b>Important Links</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" id="ni">Home</a></li>
+          <li><a href="#" id="ni">About</a></li>
+          <li><a href="#" id="ni">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4" itemscope itemtype="http://schema.org/business">
+        <h5 itemprop="name"><b>For Enquiries</b></h5>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope"></i>&emsp;<a href="mailto:yourmail@gmail.com" id="ni" itemprop="email">yourmail@domain.com</a></li>
+          <li><i class="fa fa-phone"></i>&emsp;<a href="tel:+911234567890" id="ni" itemprop="telephone">+91 1234567890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright text-center">© 2020
+      <a href="#">QueryPup</a>
+    </div>
+  </footer>
+  <!-- Footer pc ends-->
+  <!-- Footer mobile start -->
+  <footer class="footer text-center" id="footer2" style="background:black;color:snow;">
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="https://facebook.com" class="text-info" target="_blank"><img src="assets/facebook-square.png" alt="f" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://instagram.com" class="text-danger" target="_blank"><img src="assets/instagram-square.png" alt="i" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://linkedin.com" class="text-primary" target="_blank"><img src="assets/linkedin-square.png" alt="l" width="15" height="15" style="background:white;"></a></li>
+    <li class="list-inline-item"><a href="https://whatsapp.com" class="text-success" target="_blank"><img src="assets/whatsapp-square.png" alt="w" width="15" height="15" style="background:white;"></a></li>
+  </ul>
+  <div class="text-center">&copy; 2020&nbsp;<a href="#" style="color:antiquewhite;text-decoration: none;">QueryPup</a></div>
+  </footer>
+  <!-- Footer mobile ends-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
+</body>
+
+</html>
