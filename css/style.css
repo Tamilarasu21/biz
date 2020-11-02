@@ -156,7 +156,6 @@ header .navbar-default {
   margin:auto;
   width:90%;
 }
-
 @media (min-height: 480px) {
   header {
     position: -webkit-sticky;
@@ -195,7 +194,7 @@ header .navbar-default {
 /* contact page start*/
 #details
 {
-  background:#f5f5f5;
+  background:#e6e2e2;
   color:black;
   padding:13px;
 }
